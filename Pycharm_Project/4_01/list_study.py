@@ -96,3 +96,6 @@ print(dic3)
 # 循环 索引
 # 6 布尔值
 # None "" () [] {} 0 >>>>>>>false
+
+for x in  range(1,5):
+    print (x)
