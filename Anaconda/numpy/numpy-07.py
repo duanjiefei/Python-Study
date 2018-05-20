@@ -46,3 +46,57 @@ print(g)
 print(f)
 
 
+#数组的连接
+
+h = array([[1,2,3],
+           [4,5,6]])
+
+i = array([[7,8,9],
+           [10,11,12]])
+
+j = concatenate((h,i))  #数组的拼接  默认是按行进行拼接，也就是axis = 0 按第一维进行拼接
+
+print(j)
+
+k = concatenate((h,i),axis = 1)   #数组的拼接，显示的指明axis = 1 即按列进行拼接，按第二维进行拼接
+
+print(k)
+
+l = vstack((h,i))  #对应的就是按行进行拼接  Vertical 水平的
+
+print(l)
+
+m  = hstack((h,i)) # 对应的就是按照列进行拼接  horical  竖直的
+
+#[[ 1  2  3  7  8  9]
+# [ 4  5  6 10 11 12]]
+
+print(m)
+
+o = dstack((h,i))  #?不太明白
+print(o)
+
+"""
+Flatten 数组
+  的用途就是将多维数组转化为一维数组
+  
+   flatten() 方法返回的是数组的拷贝，修改生成的数组的值，不会改变原数组的值
+   falt属性会返回所有元素组成的迭代器，通过迭代器去修改后者会改变前者的值
+"""
+p  = m.flatten()  #[ 1  2  3  7  8  9  4  5  6 10 11 12]
+print(p)
+
+p[5] = 100
+print(p)
+print(m)
+
+
+q = m.flat
+
+q[0] = 99
+
+print(q)
+print(m)
+
+
+
